@@ -32,6 +32,7 @@ Route::namespace('App\\Http\\Controllers\\API\V1')->group(function () {
     Route::post('change-password', 'ProfileController@changePassword');
     Route::get('tag/list', 'TagController@list');
     Route::get('category/list', 'CategoryController@list');
+    Route::get('usertype/list', 'UserTypeController@list');
     Route::post('product/upload', 'ProductController@upload');
 
     Route::apiResources([
@@ -39,5 +40,7 @@ Route::namespace('App\\Http\\Controllers\\API\V1')->group(function () {
         'product' => 'ProductController',
         'category' => 'CategoryController',
         'tag' => 'TagController',
+        'usertype' => 'UserTypeController',
+        'pelanggan' => 'PelangganController',
     ]);
 });

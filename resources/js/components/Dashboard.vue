@@ -41,7 +41,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text">Sales</span>
-                            <span class="info-box-number">760</span>
+                            <span class="info-box-number">{{ usertypesCount }}</span>
                         </div>
                         <!-- /.info-box-content -->
                     </div>
@@ -205,8 +205,26 @@
 
 <script>
     export default {
+        data () {
+            return {
+                usertypes: [],
+            }
+        },
+        methods: {
+            loadUserTypes(){
+                axios.get("/api/usertype/list").then(({ data }) => (this.usertypes = data.data));
+            },
+        },
         mounted() {
             console.log('Component mounted.')
+        },
+        created() {
+            this.loadUserTypes();
+        },
+        computed: {
+            usertypesCount () {
+                return Object.keys(this.usertypes).length
+            }
         }
     }
 </script>
