@@ -19,4 +19,9 @@ class Pelanggan extends Model
         'no_meteran', 'nama', 'nik', 'address', 'is_active'
     ];
 
+    public function meteran(){
+
+        return $this->hasOne(Meteran::class);
+    }
+
 }

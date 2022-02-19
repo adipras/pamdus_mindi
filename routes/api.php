@@ -42,5 +42,6 @@ Route::namespace('App\\Http\\Controllers\\API\V1')->group(function () {
         'tag' => 'TagController',
         'usertype' => 'UserTypeController',
         'pelanggan' => 'PelangganController',
+        'meteran' => 'MeteranController',
     ]);
 });

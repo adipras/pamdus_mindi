@@ -15,7 +15,7 @@ class Meteran extends Model
      * @var array
      */
     protected $fillable = [
-        'pelanggan_id', 'periode', 'awal', 'akhir', 'pemakaian', 'is_generate_bill', 'created_at', 'updated_at'
+        'pelanggan_id', 'periode', 'bulan','awal', 'akhir', 'pemakaian', 'is_generate_bill', 'created_at', 'updated_at'
     ];
 
 

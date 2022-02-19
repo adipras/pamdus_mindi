@@ -17,6 +17,7 @@ class CreateMeteransTable extends Migration
             $table->id();
             $table->bigInteger('pelanggan_id')->unsigned()->index();
             $table->string('periode', 6)->index();
+            $table->string('bulan', 200)->index();
             $table->decimal('awal', 10,2)->default(0);
             $table->decimal('akhir', 10,2)->default(0);
             $table->decimal('pemakaian', 10,2)->default(0);
